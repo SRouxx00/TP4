@@ -19,7 +19,13 @@ public class BaseClient implements Client {
     private final long ip;
 
     // Dynamic data
-    private PermissionGroup group;
+    private PermissionGroup group = PermissionGroup.DEFAULT;
+
+    public BaseClient(Socket socket, String username) {
+        this.socket = socket;
+        this.username = username;
+        this.ip =
+    }
 
     public String getAddress() {
         return null;
