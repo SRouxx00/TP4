@@ -1,6 +1,6 @@
 package com.sroux00.chatserver.client;
 
-import com.sroux00.chatserver.PermissionGroup;
+import com.sroux00.chatserver.permission.PermissionGroup;
 
 public interface Client {
 

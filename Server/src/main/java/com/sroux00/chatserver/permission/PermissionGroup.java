@@ -1,4 +1,4 @@
-package com.sroux00.chatserver;
+package com.sroux00.chatserver.permission;
 
 public enum PermissionGroup {
 

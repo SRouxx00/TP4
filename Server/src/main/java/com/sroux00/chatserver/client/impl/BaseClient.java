@@ -1,20 +1,14 @@
 package com.sroux00.chatserver.client.impl;
 
-import com.sroux00.chatserver.PermissionGroup;
+import com.sroux00.chatserver.permission.PermissionGroup;
 import com.sroux00.chatserver.client.Client;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.net.Socket;
 
-@Getter
-@Setter
 public class BaseClient implements Client {
 
     // Final data
     private final String username;
-    @Getter(AccessLevel.NONE)
     private final Socket socket;
     private final long ip;
 
@@ -24,10 +18,22 @@ public class BaseClient implements Client {
     public BaseClient(Socket socket, String username) {
         this.socket = socket;
         this.username = username;
-        this.ip =
+
+    }
+
+    public String getUsername() {
+        return null;
     }
 
     public String getAddress() {
         return null;
+    }
+
+    public PermissionGroup getGroup() {
+        return this.group;
+    }
+
+    public void setGroup(PermissionGroup group) {
+        this.group = group;
     }
 }
